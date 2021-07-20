@@ -32,4 +32,10 @@ public class HelloController {
     public String SayHello(){
         return "good boy,hello!";
     }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,path = "getUserById"  )
+    public User getUserById(Integer id){
+        return userService.findUserById(id);
+    }
 }
