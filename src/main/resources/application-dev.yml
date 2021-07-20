@@ -1,0 +1,22 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    username: root
+    password: ljhhh666
+    url: jdbc:mysql://localhost:3306/comeback?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.springtemplate.entity
+
+#showSql
+logging:
+  level:
+    com:
+      springtemplate:
+        example:
+          mapper : debug
+
