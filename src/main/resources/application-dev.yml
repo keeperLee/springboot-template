@@ -26,10 +26,5 @@ mybatis:
 
 #showSql
 logging:
-  level:
-    com:
-      springtemplate:
-        example:
-          mapper : debug
+  config: classpath:logback-spring.xml
 
-#redis

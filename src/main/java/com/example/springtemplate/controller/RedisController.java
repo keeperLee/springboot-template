@@ -9,6 +9,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
@@ -22,6 +24,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/redis")
 public class RedisController {
+
+    @Autowired
+    private final static Logger logger = LoggerFactory.getLogger(RedisController.class);
 
     @Autowired
     private RedisUtil redisUtil;
@@ -47,6 +52,7 @@ public class RedisController {
     @ApiImplicitParam(name = "key", value = "键",required = true, dataType = "String")
     @GetMapping("/getValue")
     public Object getValue(String key){
+        logger.info("key:"+key);
         return redisUtil.get(key).toString();
     }
 }
