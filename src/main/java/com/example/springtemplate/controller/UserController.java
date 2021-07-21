@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * @author CarryBoy
  */
-@Api(value = "@Api：用在控制器类上，表示对类的说明", tags = "Swagger测试之用户信息管理API")
+@Api(value = "@Api：用在控制器类上，表示对类的说明", tags = "Mysql测试之用户信息管理API")
 @RestController
 @RequestMapping("/user")
 public class UserController {
