@@ -20,9 +20,13 @@ spring:
     timeout: 6000
 
 
-mybatis:
+mybatis-plus:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.example.springtemplate.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
 
 #showSql
 logging:
