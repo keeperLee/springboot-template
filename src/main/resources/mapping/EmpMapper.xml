@@ -3,9 +3,9 @@
 <mapper namespace="com.example.springtemplate.mapper.EmpMapper">
 
     <resultMap id="BaseResultMap" type="com.example.springtemplate.entity.Emp">
-        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="id" jdbcType="VARCHAR" property="id" />
         <result column="name" jdbcType="VARCHAR" property="name" />
-        <result column="age" jdbcType="VARCHAR" property="name" />
+        <result column="age" jdbcType="INTEGER" property="name" />
         <result column="email" jdbcType="VARCHAR" property="name" />
     </resultMap>
 
