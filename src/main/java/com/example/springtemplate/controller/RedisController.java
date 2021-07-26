@@ -20,6 +20,7 @@ import java.util.List;
 /**
  * @author CarryBoy
  */
+@CrossOrigin
 @Api(value = "@Api：用在控制器类上，表示对类的说明", tags = "Redis之用户信息管理API")
 @RestController
 @RequestMapping("/redis")

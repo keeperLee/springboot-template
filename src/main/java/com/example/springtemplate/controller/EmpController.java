@@ -17,6 +17,7 @@ import java.util.UUID;
 /**
  * @author CarryBoy
  */
+@CrossOrigin
 @Api(value = "@Api：用在控制器类上，表示对类的说明", tags = "Mysql测试之员工信息管理API")
 @RestController
 @RequestMapping("/emp")
