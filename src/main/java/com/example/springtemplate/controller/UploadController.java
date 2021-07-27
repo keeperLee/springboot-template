@@ -31,7 +31,7 @@ public class UploadController {
      * @return
      */
     @ApiOperation(value = "上传文件")
-    @ApiImplicitParam(name = "multipartFile", value = "文件",required = false,dataType = "file",paramType = "form")
+    @ApiImplicitParam(name = "multipartFile", value = "文件",required = true,dataType = "file",paramType = "form")
     @PostMapping(value = "/upload")
     public String handleFileUpload(@RequestParam("multipartFile") MultipartFile file) {
         if (!file.isEmpty()) {
