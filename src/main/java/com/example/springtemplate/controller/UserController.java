@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -25,9 +26,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Value("${lijian.address}")
+    private String address;
+
     @ApiOperation(value = "查找所有用户")
     @GetMapping("/getAllUser")
     public List<User> getAllUser(){
+        System.out.println(address);
         return userService.findAllUser();
     }
 

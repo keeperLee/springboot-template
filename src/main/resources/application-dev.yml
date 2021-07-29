@@ -31,4 +31,7 @@ mybatis-plus:
 #showSql
 logging:
   config: classpath:logback-spring.xml
+#constant
 
+lijian:
+  address: "海珠区万胜围"
