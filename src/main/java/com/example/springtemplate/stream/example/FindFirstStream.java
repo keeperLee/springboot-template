@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 /**
  * @author CarryBoy
  * @date 2021/7/30 11:17
- * @description
+ * @description findFirst
  */
 public class FindFirstStream {
     public static void main(String[] args) {

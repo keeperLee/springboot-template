@@ -4,6 +4,7 @@ package com.example.springtemplate.controller;
 import com.example.springtemplate.entity.Emp;
 import com.example.springtemplate.entity.User;
 import com.example.springtemplate.service.EmpService;
+import com.example.springtemplate.vo.PaginationEmp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -39,7 +40,7 @@ public class EmpController {
             @ApiImplicitParam(name = "pageIndex", value = "pageIndex",required = true, dataType = "Integer"),
             @ApiImplicitParam(name = "pageSize", value = "pageSize",required = true, dataType = "Integer")
     })
-    public List<Emp> getAllEmpByPage(Integer pageIndex,Integer pageSize){
+    public PaginationEmp getAllEmpByPage(Integer pageIndex, Integer pageSize){
         return empService.findAllEmpByPage(pageIndex,pageSize);
     }
 

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.springtemplate.entity.Emp;
 import com.example.springtemplate.mapper.EmpMapper;
 import com.example.springtemplate.service.EmpService;
+import com.example.springtemplate.vo.PaginationEmp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,9 +26,12 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
-    public List<Emp> findAllEmpByPage(Integer pageIndex, Integer pageSize) {
+    public PaginationEmp findAllEmpByPage(Integer pageIndex, Integer pageSize) {
         IPage<Emp> empIPage = empMapper.selectPage(new Page<>(pageIndex, pageSize),null);
-        return empIPage.getRecords();
+        PaginationEmp emp = new PaginationEmp();
+        emp.setList(empIPage.getRecords());
+        emp.setTotalSize(empIPage.getTotal());
+        return emp;
     }
 
     @Override
