@@ -9,7 +9,7 @@ import java.util.stream.Stream;
  * @author CarryBoy
  * @Description 常用数据结构转化成流
  */
-public class StreamExample {
+public class TypeToStream {
     public static void main(String[] args) {
         //多个数据直接转化为stream
         Stream stream1 = Stream.of("a","b","c");
@@ -35,8 +35,6 @@ public class StreamExample {
         map.put("a",100);
         map.put("b",200);
         Stream stream5 = map.entrySet().stream();
-
-
 
     }
 }
